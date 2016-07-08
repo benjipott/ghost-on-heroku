@@ -1,0 +1,15 @@
+{{!< default}}
+
+{{> index-meta}}
+
+{{!> cover}}
+
+{{> excerpts}}
+
+{{#if pagination.prev}}
+    {{pagination}}
+{{else}}
+    {{#if pagination.next}}
+        {{pagination}}
+    {{/if}}
+{{/if}}

@@ -1,0 +1,28 @@
+{{#foreach posts}}
+
+    <div class="sample animated fadeIn article-fixed-bg" data-stellar-background-ratio="0.5"
+         style="background-image: url(
+             {{#if image}}
+                 {{image}}
+             {{else}}
+                 {{@blog.cover}}
+             {{/if}}
+                 );">
+        <div class="container">
+            <div class="title animated fadeInUp">
+                <a href="{{url}}">
+                    <h1>{{title}}</h1>
+                </a>
+            </div>
+            {{> sidebar}}
+        </div>
+    </div>
+
+    <article class="excerpt animated fadeIn {{post_class}}">
+        <div class="container">
+            <!--<p>{{excerpt words="100"}}&hellip;</p>-->
+            <p>{{excerpt words="100"}} <a class="read-more" href="{{url}}"> voir plus &hellip;</a></p>
+        </div>
+    </article>
+
+{{/foreach}}
